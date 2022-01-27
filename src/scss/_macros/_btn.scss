@@ -13,6 +13,27 @@
   box-shadow: none;
   background-color: transparent;
 
+  &.c-btn--white {
+    &:before,
+    &:after {
+      background-color: #ffffff;
+    }
+
+    span {
+      color: #ffffff;
+    }
+  }
+  &.c-btn--gold {
+    &:before,
+    &:after {
+      background-color: #9B8E6F;
+    }
+
+    span {
+      color: #9B8E6F;
+    }
+  }
+
   &:hover {
     &:before,
     &:after {
