@@ -7,7 +7,7 @@ include ./_mixin/_modal
 mixin mainSection(classMod, img, title, breadcrumbsArr)
   main#main.main(class!="main--" + classMod)
     .main__bg
-      img(src!="img/" + img srcset!= 'img/' + img + " 2x" alt="")
+      img(src!="img/" + img alt="")
     .main__wrapper
       if(classMod === 'home')
         img.main__logo(src="img/logo.svg" alt="")
