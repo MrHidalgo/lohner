@@ -661,6 +661,27 @@ picture {
   padding-right: 5px;
 }
 
+.schedule {
+  padding-top: 175px;
+  padding-bottom: 175px;
+  background-image: url("../img/img-schedule-bg@2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 1439px) {
+  .schedule {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .schedule {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
 .information {
   padding-top: 175px;
   padding-bottom: 175px;
