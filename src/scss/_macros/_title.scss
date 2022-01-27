@@ -1,12 +1,67 @@
 // TITLE :: START
 
 .c-title {
-  &__text {
-    &-wrap {}
+  color: #9b8e6f;
+  font-family: 'Didot', serif;
+  font-weight: normal;
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  @include adaptive(1439) {
+    font-size: 50px;
+  }
+  @include adaptive(1279) {
+    font-size: 40px;
+  }
+  @include adaptive(767) {
+    font-size: 35px;
+  }
+  @include adaptive(374) {
+    font-size: 30px;
   }
 
-  &__icon {
-    &-wrap {}
+  &.c-title--big {
+    font-size: 90px;
+    @include adaptive(1536) {
+      font-size: 80px;
+    }
+    @include adaptive(1439) {
+      font-size: 65px;
+    }
+    @include adaptive(1279) {
+      font-size: 50px;
+    }
+    @include adaptive(767) {
+      font-size: 40px;
+    }
+    @include adaptive(374) {
+      font-size: 35px;
+    }
+  }
+  &.c-title--medium {
+    font-size: 40px;
+    @include adaptive(1279) {
+      font-size: 35px;
+    }
+    @include adaptive(767) {
+      font-size: 30px;
+    }
+  }
+  &.c-title--small {
+    font-size: 30px;
+    @include adaptive(767) {
+      font-size: 25px;
+    }
+    @include adaptive(413) {
+      font-size: 22px;
+    }
+  }
+
+  &.c-title--black {
+    color: #000000;
+  }
+  &.c-title--white {
+    color: #ffffff;
   }
 }
 

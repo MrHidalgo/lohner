@@ -1,0 +1,63 @@
+// SECTION :: START
+
+.information {
+  padding-top: 175px;
+  padding-bottom: 175px;
+  background-color: #efebe4;
+  @include adaptive(1439) {
+    padding-top: 125px;
+    padding-bottom: 125px;
+  }
+  @include adaptive(767) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    padding-bottom: 50px;
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 675px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 75px;
+    text-align: center;
+    @include adaptive(767) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @include adaptive(767) {
+      flex-direction: column;
+
+
+    }
+
+    li {
+      padding-left: 20px;
+      padding-right: 20px;
+      @include adaptive(767) {
+        padding-left: 0;
+        padding-right: 0;
+
+        &:not(:last-of-type) {
+          padding-bottom: 20px;
+        }
+      }
+    }
+
+    a {
+      position: relative;
+      display: flex;
+      @include hoverState(#9b8e6f);
+    }
+  }
+}
+
+// SECTION :: END
