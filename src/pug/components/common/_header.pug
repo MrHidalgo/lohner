@@ -1,7 +1,39 @@
 // HEADER :: START
 
 header#header.header
-  .c-grid
+  .c-grid-fluid
     .header__wrapper
+      .header__wrapper-left
+
+        .logo.logo--header
+          a.logo__btn(href="#")
+            img.logo__img(src="img/logo-row.png" srcset="img/logo-row@2x.png 2x" alt="")
+
+      .header__wrapper-right
+
+        div
+
+          ul.header__social
+            li
+              a(href="#")
+                i.icon-font.icon-instagram
+            li
+              a(href="#")
+                i.icon-font.icon-facebook
+            li
+              a(href="#")
+                i.icon-font.icon-is
+
+        div
+
+          a.header__address(href="#") bryn mawr, pa | (610) 822-9136
+
+        div
+
+          a.header__request(href="#") request a consultation
+
+        div
+
+          +hamburger()
 
 // HEADER :: END

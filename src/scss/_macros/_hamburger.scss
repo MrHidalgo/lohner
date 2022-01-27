@@ -14,18 +14,6 @@ $hamburger-line-backgroundColor: #fff;
     display: flex;
   }
 
-  &.is-active {
-    .c-hamburger__inner {
-      &:after,
-      &:before {
-      }
-      &:before {
-      }
-      &:after {
-      }
-    }
-  }
-
   &__box {
     position: relative;
     width: $hamburger-box-width;

@@ -50,6 +50,41 @@ var Common = function () {
 
 /***/ }),
 
+/***/ "./src/js/macros/hamburger.js":
+/*!************************************!*\
+  !*** ./src/js/macros/hamburger.js ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var Hamburger = function () {
+  var init = function init() {
+    var btn = document.querySelector("[hamburger-js]"),
+        hideScrollContainer = document.querySelectorAll("html, body"),
+        mobileContainer = document.querySelector("[mobile-block-js]");
+    /**
+     * @description
+     */
+
+    btn.addEventListener("click", function (ev) {
+      var elem = ev.currentTarget;
+      elem.classList.toggle("is-active"); // mobileContainer.classList.toggle("is-open");
+
+      hideScrollContainer.forEach(function (val, idx) {
+        val.classList.toggle("is-hideScroll");
+      });
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Hamburger);
+
+/***/ }),
+
 /***/ "./src/js/macros/portfolio.js":
 /*!************************************!*\
   !*** ./src/js/macros/portfolio.js ***!
@@ -175,6 +210,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/common */ "./src/js/common/common.js");
 /* harmony import */ var _macros_testimonials__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/testimonials */ "./src/js/macros/testimonials.js");
 /* harmony import */ var _macros_portfolio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./macros/portfolio */ "./src/js/macros/portfolio.js");
+/* harmony import */ var _macros_hamburger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./macros/hamburger */ "./src/js/macros/hamburger.js");
+
 
 
  // EVENT LISTENER - LOAD
@@ -184,6 +221,7 @@ window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
 
+  _macros_hamburger__WEBPACK_IMPORTED_MODULE_3__["default"].init();
   _macros_testimonials__WEBPACK_IMPORTED_MODULE_1__["default"].init();
   _macros_portfolio__WEBPACK_IMPORTED_MODULE_2__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
