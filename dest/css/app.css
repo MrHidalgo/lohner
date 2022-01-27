@@ -4,7 +4,7 @@
   margin-left: auto;
 }
 
-.testimonials__bg > div:nth-of-type(2) img, .gallery__bg img, .media__wrapper > img, .video__box > img {
+.portfolio__carousel .swiper-slide > img, .testimonials__bg > div:nth-of-type(2) img, .gallery__bg img, .media__wrapper > img, .video__box > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1545,4 +1545,105 @@ picture {
 }
 .information__list a:after {
   right: 50%;
+}
+
+.portfolio {
+  padding-top: 150px;
+}
+@media screen and (max-width: 1439px) {
+  .portfolio {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .portfolio {
+    padding-top: 50px;
+  }
+}
+.portfolio__label, .portfolio__title {
+  text-align: left;
+}
+.portfolio__title {
+  padding-bottom: 50px;
+}
+@media screen and (max-width: 767px) {
+  .portfolio__title {
+    padding-bottom: 25px;
+  }
+}
+.portfolio__carousel {
+  padding-bottom: 200px;
+}
+@media screen and (max-width: 1439px) {
+  .portfolio__carousel {
+    padding-bottom: 150px;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .portfolio__carousel {
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio__carousel {
+    padding-bottom: 50px;
+  }
+}
+.portfolio__carousel .swiper {
+  opacity: 0;
+}
+.portfolio__carousel .swiper-slide {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 535px !important;
+  height: 590px;
+  padding: 50px;
+}
+@media screen and (max-width: 1535px) {
+  .portfolio__carousel .swiper-slide {
+    width: 475px !important;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 1365px) {
+  .portfolio__carousel .swiper-slide {
+    width: 400px !important;
+    height: 450px;
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .portfolio__carousel .swiper-slide {
+    width: 325px !important;
+    height: 400px;
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .portfolio__carousel .swiper-slide {
+    width: 290px !important;
+    height: 350px;
+    padding: 20px;
+  }
+}
+.portfolio__carousel .swiper-slide:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.portfolio__carousel .swiper-slide > img {
+  z-index: 0;
+}
+.portfolio__carousel .swiper-slide p {
+  z-index: 2;
+  position: relative;
 }

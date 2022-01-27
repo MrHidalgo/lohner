@@ -50,6 +50,52 @@ var Common = function () {
 
 /***/ }),
 
+/***/ "./src/js/macros/portfolio.js":
+/*!************************************!*\
+  !*** ./src/js/macros/portfolio.js ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var Portfolio = function () {
+  var init = function init() {
+    if (!document.querySelector('.portfolio')) return;
+
+    for (var i = 1; i <= document.querySelectorAll('.portfolio__carousel').length; i++) {
+      document.querySelectorAll('.portfolio__carousel')[i - 1].style.width = 'calc(100% + ' + (document.querySelector('#portfolio .c-grid').getBoundingClientRect().left + 20) + 'px)';
+      new Swiper('.portfolioSwiper' + i, {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false
+        },
+        speed: 1000,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        on: {
+          init: function init(swiper) {
+            swiper.$el[0].style.opacity = '1';
+          }
+        }
+      });
+    }
+
+    window.addEventListener('resize', function (ev) {
+      for (var _i = 1; _i <= document.querySelectorAll('.portfolio__carousel').length; _i++) {
+        document.querySelectorAll('.portfolio__carousel')[_i - 1].style.width = 'calc(100% + ' + (document.querySelector('#portfolio .c-grid').getBoundingClientRect().left + 20) + 'px)';
+      }
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Portfolio);
+
+/***/ }),
+
 /***/ "./src/js/macros/testimonials.js":
 /*!***************************************!*\
   !*** ./src/js/macros/testimonials.js ***!
@@ -128,6 +174,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/common */ "./src/js/common/common.js");
 /* harmony import */ var _macros_testimonials__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/testimonials */ "./src/js/macros/testimonials.js");
+/* harmony import */ var _macros_portfolio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./macros/portfolio */ "./src/js/macros/portfolio.js");
+
 
  // EVENT LISTENER - LOAD
 // ========================================
@@ -137,6 +185,7 @@ window.addEventListener('load', function (ev) {
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
 
   _macros_testimonials__WEBPACK_IMPORTED_MODULE_1__["default"].init();
+  _macros_portfolio__WEBPACK_IMPORTED_MODULE_2__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

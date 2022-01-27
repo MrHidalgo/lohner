@@ -1,6 +1,7 @@
 import Common from "./common/common";
 
 import Testimonials from "./macros/testimonials";
+import Portfolio from "./macros/portfolio";
 
 
 // EVENT LISTENER - LOAD
@@ -12,6 +13,7 @@ window.addEventListener('load', (ev) => {
 
   // MACROS
   Testimonials.init();
+  Portfolio.init();
 
 }, false);
 
