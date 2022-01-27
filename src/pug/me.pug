@@ -8,6 +8,10 @@ extends shared/_layout
 block content
   main.main(class!= pageClassName)
 
+    +mainSection('me', 'img-me-main-bg.jpg', 'Dr. Ronald A. Lohner', ['HOME', '|', 'about', '|', 'DR. RONALD A. LOHNER'])
+
+    include components/me/me
+
     include components/common/testimonials
     include components/common/video
     include components/common/media
