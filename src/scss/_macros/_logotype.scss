@@ -1,0 +1,28 @@
+// LOGOTYPE :: START
+
+.logo {
+  display: flex;
+
+  &.logo--footer {
+    max-width: 350px;
+    @include adaptive(1279) {
+      max-width: 300px;
+    }
+    @include adaptive(767) {
+      max-width: 250px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// LOGOTYPE :: END
