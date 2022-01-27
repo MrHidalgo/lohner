@@ -68,10 +68,21 @@ var Hamburger = function () {
 
     btn.addEventListener("click", function (ev) {
       var elem = ev.currentTarget;
-      elem.classList.toggle("is-active"); // mobileContainer.classList.toggle("is-open");
+      elem.classList.toggle("is-active");
+
+      if (mobileContainer.classList.contains("is-open")) {
+        mobileContainer.classList.remove("is-open");
+        mobileContainer.classList.add("is-animated");
+        setTimeout(function () {
+          return mobileContainer.classList.remove("is-animated");
+        }, 300);
+      } else {
+        mobileContainer.classList.add("is-open");
+      }
 
       hideScrollContainer.forEach(function (val, idx) {
         val.classList.toggle("is-hideScroll");
+        val.classList.toggle("is-menuOpen");
       });
     });
   };
@@ -82,6 +93,43 @@ var Hamburger = function () {
 }();
 
 /* harmony default export */ __webpack_exports__["default"] = (Hamburger);
+
+/***/ }),
+
+/***/ "./src/js/macros/menu.js":
+/*!*******************************!*\
+  !*** ./src/js/macros/menu.js ***!
+  \*******************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var Menu = function () {
+  var init = function init() {
+    $('.menu__btn').hover(function (ev) {
+      var el = $(ev.currentTarget),
+          elID = el.attr('data-id');
+
+      if ($(window).width() >= 768) {
+        $('.menu__btn').removeClass('is-hover');
+        el.addClass('is-hover');
+        $('.menu__content').hide();
+        $('.menu__content[data-content-id="' + elID + '"]').fadeIn(500);
+      }
+    }, function (ev) {});
+    $('.menu__link-wrapper').hover(function (ev) {}, function (ev) {
+      if ($(window).width() >= 768) {
+        $('.menu__btn').removeClass('is-hover');
+        $('.menu__content').hide();
+      }
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Menu);
 
 /***/ }),
 
@@ -211,6 +259,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _macros_testimonials__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/testimonials */ "./src/js/macros/testimonials.js");
 /* harmony import */ var _macros_portfolio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./macros/portfolio */ "./src/js/macros/portfolio.js");
 /* harmony import */ var _macros_hamburger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./macros/hamburger */ "./src/js/macros/hamburger.js");
+/* harmony import */ var _macros_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./macros/menu */ "./src/js/macros/menu.js");
+
 
 
 
@@ -222,6 +272,7 @@ window.addEventListener('load', function (ev) {
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
 
   _macros_hamburger__WEBPACK_IMPORTED_MODULE_3__["default"].init();
+  _macros_menu__WEBPACK_IMPORTED_MODULE_4__["default"].init();
   _macros_testimonials__WEBPACK_IMPORTED_MODULE_1__["default"].init();
   _macros_portfolio__WEBPACK_IMPORTED_MODULE_2__["default"].init();
 }, false); // EVENT LISTENER - SCROLL

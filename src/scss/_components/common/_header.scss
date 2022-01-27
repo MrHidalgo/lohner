@@ -1,12 +1,48 @@
 // HEADER :: START
 
 .header {
-  z-index: 990;
+  z-index: 9999;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: rgba(#000, 0.70);
+  @include transition(background-color);
+
+  .is-menuOpen & {
+    background-color: transparent;
+    @include transition(background-color);
+
+    .header {
+      &__address,
+      &__request,
+      &__social {
+        opacity: 0;
+        @include transition(opacity);
+      }
+    }
+
+    .logo {
+      &.logo--header {
+        .logo {
+          &__img {
+            &:nth-of-type(2) {
+              opacity: 1;
+              @include transition(opacity);
+            }
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        background-color: #000;
+      }
+    }
+  }
 
   &__wrapper {
     display: flex;
@@ -38,6 +74,7 @@
     color: #fff;
     text-transform: uppercase;
     @include hoverState(#fff);
+    @include transition(opacity);
     @include adaptive(1279) {
       font-size: 14px;
     }
@@ -49,6 +86,7 @@
   &__social {
     display: flex;
     align-items: center;
+    @include transition(opacity);
     @include adaptive(767) {
       display: none;
     }
