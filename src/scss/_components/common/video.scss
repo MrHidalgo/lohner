@@ -1,0 +1,69 @@
+// SECTION :: START
+
+.video {
+  padding-top: 230px;
+  padding-bottom: 65px;
+  @include adaptive(1535) {
+    padding-top: 200px;
+  }
+  @include adaptive(1439) {
+    padding-top: 150px;
+  }
+  @include adaptive(1279) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  @include adaptive(767) {
+    padding-top: 50px;
+  }
+
+  &__label,
+  &__title {
+    text-align: left;
+  }
+
+  &__title {
+    padding-bottom: 50px;
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 350px;
+    @include adaptive(1023) {
+      height: 300px;
+    }
+
+    > img {
+      @extend %imageResCoverAbs;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 50px;
+
+      > div {
+        width: 100%;
+        max-width: calc((100% - 40px) / 3);
+        @include adaptive(1023) {
+          max-width: 100%;
+
+          &:not(:last-of-type) {
+            padding-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  &__btn {
+    @include adaptive(767) {
+      justify-content: center;
+    }
+  }
+}
+
+// SECTION :: END

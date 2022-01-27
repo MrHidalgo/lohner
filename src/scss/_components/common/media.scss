@@ -1,0 +1,76 @@
+// SECTION :: START
+
+.media {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  @include adaptive(1279) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    &:after {
+      content: "";
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(66,25,15,1) 100%);
+      @include adaptive(767) {
+        opacity: 1;
+      }
+    }
+
+    > img {
+      @extend %imageResCoverAbs;
+    }
+
+    > div {
+      z-index: 2;
+      position: relative;
+      padding-top: 320px;
+      padding-left: 100px;
+      padding-bottom: 150px;
+      @include adaptive(1535) {
+        padding-top: 285px;
+      }
+      @include adaptive(1439) {
+        padding-top: 250px;
+      }
+      @include adaptive(1279) {
+        padding-top: 200px;
+        padding-left: 50px;
+      }
+      @include adaptive(767) {
+        padding-top: 300px;
+        padding-left: 20px;
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  &__label,
+  &__title {
+    text-align: left;
+  }
+
+  &__label {
+    color: #ffffff;
+  }
+
+  &__title {
+    padding-bottom: 50px;
+  }
+
+  &__btn {
+    @include adaptive(767) {
+      justify-content: center;
+    }
+  }
+}
+
+// SECTION :: END
