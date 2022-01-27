@@ -1,57 +1,78 @@
 // BUTTON :: START
 
-// ==================================================
-// ==================================================
-// ==================================================
-
-$bth-width: 250px;
-$bth-height: 45px;
-$btn-border-width: 1px;
-$btn-border-color: rgba(#000, 1);
-$bth-border-radius: 5px;
-$bth-box-shadow: none;
-$bth-background-color: rgba(#000, 1);
-$bth-color: rgba(#fff, 1);
-$bth-font-size: rgba(#000, 1);
-$bth-font-weight: bold;
-
-$btn-color--border: rgba(#000, 1);
-
-// ==================================================
-// ==================================================
-// ==================================================
-
 .c-btn {
   outline: none;
   cursor: pointer;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: $bth-width;
-  height: $bth-height;
-  border: $btn-border-width solid $btn-border-color;
-  box-shadow: $bth-box-shadow;
-  border-radius: $bth-border-radius;
-  color: $bth-color;
-  font-size: $bth-font-size;
-  font-weight: $bth-font-weight;
+  width: auto;
+  height: 65px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
 
-  &--border {
-    background-color: transparent;
-    color: $btn-color--border;
+  &:hover {
+    &:before,
+    &:after {
+      width: 100%;
+      @include transition(width);
+    }
+
+    span {
+      transform: scale(0.95);
+      @include transition(transform);
+    }
   }
 
-  &--bg {
-    background-color: $bth-background-color;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100px;
+    height: 1px;
+    background-color: #000000;
+    @include transition(width);
+    @include adaptive(767) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
-  &__text {
-    &-wrap {}
+  &:before {
+    top: 0;
   }
 
-  &__icon {
-    &-wrap {}
+  &:after {
+    bottom: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    &--center {
+      justify-content: center;
+    }
+  }
+
+  span {
+    font-family: 'Muli', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #404040;
+    transform-origin: center;
+    @include transition(transform);
+    @include adaptive(1279) {
+      font-size: 16px;
+    }
+    @include adaptive(767) {
+      font-size: 14px;
+    }
   }
 }
 

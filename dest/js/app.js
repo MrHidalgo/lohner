@@ -48,6 +48,36 @@ var Common = function () {
 
 /* harmony default export */ __webpack_exports__["default"] = (Common);
 
+/***/ }),
+
+/***/ "./src/js/macros/testimonials.js":
+/*!***************************************!*\
+  !*** ./src/js/macros/testimonials.js ***!
+  \***************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var Testimonials = function () {
+  var init = function init() {
+    if (!document.querySelector('.testimonialsSwiper')) return;
+    new Swiper('.testimonialsSwiper', {
+      speed: 1000,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.testimonials__nav--next',
+        prevEl: '.testimonials__nav--prev'
+      }
+    });
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Testimonials);
+
 /***/ })
 
 /******/ 	});
@@ -97,12 +127,16 @@ var __webpack_exports__ = {};
   \***********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/common */ "./src/js/common/common.js");
+/* harmony import */ var _macros_testimonials__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/testimonials */ "./src/js/macros/testimonials.js");
+
  // EVENT LISTENER - LOAD
 // ========================================
 
 window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
+
+  _macros_testimonials__WEBPACK_IMPORTED_MODULE_1__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

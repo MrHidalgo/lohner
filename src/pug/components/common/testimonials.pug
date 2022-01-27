@@ -1,0 +1,48 @@
+// SECTION :: START
+
+section#testimonials.testimonials
+
+  .testimonials__bg
+    div
+    div
+      img(src="img/img-testimonials-bg.jpg" srcset="img/img-testimonials-bg@2x.jpg 2x" alt="")
+
+  .c-grid
+    .testimonials__wrapper
+      div
+
+        h2.testimonials__title
+          span.c-title.c-title--medium.c-title--black In the words of our patients...
+          i.icon-font.icon-quote
+
+        .testimonials__carousel
+          .swiper.testimonialsSwiper
+            .swiper-wrapper
+              each val, idx in [1,2,3]
+                .swiper-slide
+                  div
+                    p.c-title.c-title--medium.c-title--black Dr. Lohner was so professional & patient
+                  div
+                    p.c-desc I got a breast reduction done by Dr Lohner back on April 29th 2021 but I wanted to wait until I made a full recovery before making my review.
+                .swiper-slide
+                  div
+                    p.c-title.c-title--medium.c-title--black Dr. Lohner was so professional & patient
+                  div
+                    p.c-desc I am so pleased with my results. Dr Lohner was so professional and patient with me. I went in to Dr lohners office for a consultation and with in a couple weeks I was all ready in surgery.
+                .swiper-slide
+                  div
+                    p.c-title.c-title--medium.c-title--black Dr. Lohner was so professional & patient
+                  div
+                    p.c-desc After surgery I worked with Lindsey and Rachel and they helped me so much. Always there to answer any questions I had (and I had a lot). Not to mention the two women at the front desk are the sweetest most welcoming people I’ve met.
+
+        .testimonials__nav-wrapper
+          a.testimonials__nav.testimonials__nav--prev(href="#")
+            i.icon-font.icon-caret
+          a.testimonials__nav.testimonials__nav--next(href="#")
+            i.icon-font.icon-caret
+
+        .testimonials__btn.c-btn__wrapper
+          a.c-btn(href="#")
+            span read more testimonials
+
+// SECTION :: END
