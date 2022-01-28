@@ -2508,6 +2508,73 @@ picture {
   right: 50%;
 }
 
+.our {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 1279px) {
+  .our {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .our {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.our__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/img-pattern-bg@2x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.our__bg:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(white));
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+}
+.our__wrapper {
+  z-index: 2;
+  position: relative;
+}
+.our__wrapper > div {
+  width: 100%;
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.our__title {
+  padding-bottom: 50px;
+}
+.our__desc {
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.our__btn .c-btn:before, .our__btn .c-btn:after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .about {
   position: relative;
   padding-top: 150px;
