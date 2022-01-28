@@ -44,7 +44,35 @@
 
 	&__title {
 		padding-bottom: 15px;
+    @include adaptive(767) {
+      font-size: 32px;
+    }
+    @include adaptive(374) {
+      font-size: 28px;
+    }
 	}
+
+  &__subtitle {
+    padding-bottom: 50px;
+    font-size: 22px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    @include adaptive(767) {
+      font-size: 18px;
+    }
+  }
+
+  &__btn {
+    .c-btn {
+      &:before,
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
 
 	&__breadcrumbs {
 		display: flex;

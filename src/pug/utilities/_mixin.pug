@@ -10,7 +10,12 @@ mixin mainSection(classMod, img, title, breadcrumbsArr)
       img(src!="img/" + img alt="")
     .main__wrapper
       if(classMod === 'home')
-        img.main__logo(src="img/logo.svg" alt="")
+        .main__content
+          h1.main__title.c-title.c-title--white Voted Philadelphia’s
+          p.main__subtitle “Top Doc” for 13 Years Straight!
+          .main__btn.c-btn__wrapper.c-btn__wrapper--center
+            a.c-btn.c-btn--white(href="#")
+              span SCHEDULE A CONSULTATION
       else
         .main__content
           h1.main__title.c-title.c-title--white!= title

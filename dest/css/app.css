@@ -1564,6 +1564,35 @@ picture {
 .main__title {
   padding-bottom: 15px;
 }
+@media screen and (max-width: 767px) {
+  .main__title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .main__title {
+    font-size: 28px;
+  }
+}
+.main__subtitle {
+  padding-bottom: 50px;
+  font-size: 22px;
+  letter-spacing: 0.15em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media screen and (max-width: 767px) {
+  .main__subtitle {
+    font-size: 18px;
+  }
+}
+.main__btn .c-btn:before, .main__btn .c-btn:after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
 .main__breadcrumbs {
   display: -webkit-box;
   display: -ms-flexbox;
