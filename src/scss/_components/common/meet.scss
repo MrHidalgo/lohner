@@ -1,0 +1,107 @@
+// SECTION :: START
+
+.meet {
+  position: relative;
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: calc(100% - 200px);
+    @include adaptive(767) {
+      position: relative;
+      top: 0;
+      height: auto;
+      padding-bottom: 50px;
+    }
+
+    > div {
+      &:nth-of-type(1) {
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 45%;
+        height: 75%;
+        @include adaptive(767) {
+          display: none;
+        }
+
+        img {
+          @extend %imageResCoverAbs;
+        }
+      }
+      &:nth-of-type(2) {
+        z-index: 3;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 45%;
+        @include adaptive(767) {
+          width: 100%;
+        }
+
+        img {
+          margin-left: auto;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+    }
+  }
+
+  &__wrapper {
+    z-index: 5;
+    position: relative;
+    display: flex;
+    padding-top: 225px;
+    padding-bottom: 225px;
+    @include adaptive(1535) {
+      padding-top: 155px;
+      padding-bottom: 155px;
+    }
+    @include adaptive(1365) {
+      padding-top: 125px;
+      padding-bottom: 125px;
+    }
+    @include adaptive(1279) {
+      padding-top: 75px;
+    }
+    @include adaptive(1023) {
+      padding-top: 0;
+      padding-bottom: 100px;
+    }
+    @include adaptive(767) {
+      padding-bottom: 50px;
+    }
+
+    > div {
+      width: 40%;
+      @include adaptive(767) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__label,
+  &__title {
+    text-align: left;
+  }
+
+  &__title,
+  &__desc {
+    padding-bottom: 50px;
+  }
+}
+
+// SECTION :: END
