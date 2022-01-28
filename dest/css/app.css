@@ -2836,6 +2836,140 @@ picture {
   text-align: center;
 }
 
+.face {
+  position: relative;
+  padding-top: 155px;
+  padding-bottom: 165px;
+}
+@media screen and (max-width: 1365px) {
+  .face {
+    padding-top: 75px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .face {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+.face__bg {
+  z-index: 0;
+  position: absolute;
+  top: 155px;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: calc(100% - 320px);
+}
+@media screen and (max-width: 1365px) {
+  .face__bg {
+    top: 75px;
+    height: calc(100% - 240px);
+  }
+}
+@media screen and (max-width: 1023px) {
+  .face__bg {
+    top: 50px;
+    height: calc(100% - 215px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .face__bg {
+    position: static;
+    top: 0;
+    height: auto;
+  }
+}
+.face__bg > div {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #efebe4;
+}
+@media screen and (max-width: 1023px) {
+  .face__bg > div {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .face__bg > div {
+    position: static;
+    width: 100%;
+  }
+}
+.face__bg > div:nth-of-type(1) {
+  z-index: 2;
+}
+.face__bg > div:nth-of-type(2) {
+  z-index: 1;
+  right: 0;
+  width: 70%;
+  -webkit-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+          transform: translateY(50px);
+  background-image: url("../img/img-face-bg@2x.jpg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+}
+@media screen and (max-width: 767px) {
+  .face__bg > div:nth-of-type(2) {
+    display: none;
+  }
+}
+.face__wrapper {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 155px;
+  padding-bottom: 155px;
+}
+@media screen and (max-width: 1023px) {
+  .face__wrapper {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .face__wrapper {
+    left: -20px;
+    width: calc(100% + 40px);
+    padding: 50px 20px;
+    background-color: #efebe4;
+  }
+}
+.face__wrapper > div {
+  width: 100%;
+  max-width: 550px;
+}
+@media screen and (max-width: 1279px) {
+  .face__wrapper > div {
+    max-width: 50%;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .face__wrapper > div {
+    max-width: 65%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .face__wrapper > div {
+    max-width: 100%;
+  }
+}
+.face__label, .face__title {
+  text-align: left;
+}
+.face__title, .face__desc {
+  padding-bottom: 50px;
+}
+
 .contact {
   padding-top: 135px;
   background-image: url("../img/img-pattern-bg@2x.png");

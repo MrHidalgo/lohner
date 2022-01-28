@@ -1,0 +1,114 @@
+// SECTION :: START
+
+.face {
+  position: relative;
+  padding-top: 155px;
+  padding-bottom: 165px;
+  @include adaptive(1365) {
+    padding-top: 75px;
+  }
+  @include adaptive(1023) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 155px;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: calc(100% - (155px + 165px));
+    @include adaptive(1365) {
+      top: 75px;
+      height: calc(100% - (75px + 165px));
+    }
+    @include adaptive(1023) {
+      top: 50px;
+      height: calc(100% - (50px + 165px));
+    }
+    @include adaptive(767) {
+      position: static;
+      top: 0;
+      height: auto;
+    }
+
+    > div {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background-color: #efebe4;
+      @include adaptive(1023) {
+        width: 65%;
+      }
+      @include adaptive(767) {
+        position: static;
+        width: 100%;
+      }
+
+      &:nth-of-type(1) {
+        z-index: 2;
+      }
+      &:nth-of-type(2) {
+        z-index: 1;
+        right: 0;
+        width: 70%;
+        transform: translateY(50px);
+        background-image: url('../img/img-face-bg@2x.jpg');
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: cover;
+        @include adaptive(767) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    padding-top: 155px;
+    padding-bottom: 155px;
+    @include adaptive(1023) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    @include adaptive(767) {
+      left: -20px;
+      width: calc(100% + 40px);
+      padding: 50px 20px;
+      background-color: #efebe4;
+    }
+
+    > div {
+      width: 100%;
+      max-width: 550px;
+      @include adaptive(1279) {
+        max-width: 50%;
+        padding-right: 15px;
+      }
+      @include adaptive(1023) {
+        max-width: 65%;
+      }
+      @include adaptive(767) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__label,
+  &__title {
+    text-align: left;
+  }
+
+  &__title,
+  &__desc {
+    padding-bottom: 50px;
+  }
+}
+
+// SECTION :: END
