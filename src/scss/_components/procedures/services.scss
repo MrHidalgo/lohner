@@ -1,0 +1,70 @@
+// SECTION :: START
+
+.services {
+  padding-top: 75px;
+  padding-bottom: 140px;
+  @include adaptive(1279) {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  @include adaptive(767) {
+    padding-bottom: 50px;
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 225px;
+    padding: 0 30px 50px 30px;
+    background-image: url('../img/img-services-pattern-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @include adaptive(767) {
+      height: auto;
+      min-height: 200px;
+      padding: 30px 15px;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+
+      > div {
+        position: relative;
+        left: -15px;
+        width: calc(100% + 15px);
+        max-width: calc(100% / 3);
+        padding-left: 15px;
+        padding-bottom: 15px;
+        @include adaptive(1279) {
+          max-width: calc(100% / 2);
+        }
+        @include adaptive(767) {
+          left: 0;
+          max-width: 100%;
+          padding-left: 0;
+        }
+      }
+    }
+
+    &-title {
+      padding-bottom: 15px;
+      text-align: left;
+      @include adaptive(767) {
+        text-align: center;
+      }
+    }
+
+    .c-btn {
+      &:before {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+// SECTION :: END

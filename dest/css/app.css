@@ -2846,7 +2846,7 @@ picture {
     padding-top: 75px;
   }
 }
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
   .face {
     padding-top: 0;
     padding-bottom: 0;
@@ -2968,6 +2968,88 @@ picture {
 }
 .face__title, .face__desc {
   padding-bottom: 50px;
+}
+
+.services {
+  padding-top: 75px;
+  padding-bottom: 140px;
+}
+@media screen and (max-width: 1279px) {
+  .services {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .services {
+    padding-bottom: 50px;
+  }
+}
+.services__box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 225px;
+  padding: 0 30px 50px 30px;
+  background-image: url("../img/img-services-pattern-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (max-width: 767px) {
+  .services__box {
+    height: auto;
+    min-height: 200px;
+    padding: 30px 15px;
+  }
+}
+.services__box-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.services__box-wrapper > div {
+  position: relative;
+  left: -15px;
+  width: calc(100% + 15px);
+  max-width: 33.3333333333%;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+@media screen and (max-width: 1279px) {
+  .services__box-wrapper > div {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .services__box-wrapper > div {
+    left: 0;
+    max-width: 100%;
+    padding-left: 0;
+  }
+}
+.services__box-title {
+  padding-bottom: 15px;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .services__box-title {
+    text-align: center;
+  }
+}
+.services__box .c-btn:before {
+  opacity: 0;
 }
 
 .contact {
