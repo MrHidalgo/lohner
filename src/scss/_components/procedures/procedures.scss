@@ -1,0 +1,103 @@
+// SECTION :: START
+
+.procedures {
+  padding-top: 255px;
+  padding-bottom: 75px;
+  @include adaptive(1439) {
+    padding-top: 200px;
+  }
+  @include adaptive(1279) {
+    padding-top: 50px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    @include adaptive(1279) {
+      flex-wrap: wrap;
+    }
+
+    &-left,
+    &-right {
+      z-index: 3;
+      position: relative;
+      width: 100%;
+      max-width: 406px;
+      height: 650px;
+      @include adaptive(1535) {
+        max-width: 375px;
+        height: 500px;
+      }
+      @include adaptive(1279) {
+        max-width: 50%;
+        height: 400px;
+      }
+      @include adaptive(767) {
+        max-width: 100%;
+      }
+
+      img {
+        @extend %imageResCoverAbs;
+        border: 10px solid #fff;
+      }
+    }
+
+    &-left {
+      @include adaptive(1279) {
+        order: 2;
+      }
+    }
+
+    &-right {
+      @include adaptive(1279) {
+        order: 3;
+      }
+    }
+
+    &-middle {
+      z-index: 1;
+      position: relative;
+      flex: 1;
+      min-width: 1px;
+      max-width: 100%;
+      padding: 50px 30px;
+      @include adaptive(1279) {
+        order: 1;
+        flex: 100%;
+      }
+      @include adaptive(767) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: -100px;
+        left: -100px;
+        width: calc(100% + 200px);
+        height: calc(100% + 200px);
+        background-image: url('../img/img-pattern-bg@2x.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @include adaptive(1535) {
+          top: -50px;
+          height: calc(100% + 100px);
+        }
+      }
+    }
+  }
+
+  &__content {
+    z-index: 5;
+    position: relative;
+  }
+
+  &__desc {
+    padding-top: 50px;
+    text-align: center;
+  }
+}
+
+// SECTION :: END
