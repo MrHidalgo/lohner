@@ -1,0 +1,101 @@
+// SECTION :: START
+
+.implants {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @include adaptive(767) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__bg {
+    z-index: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: calc(90% - 100px);
+    height: calc(100% - 200px);
+    @include adaptive(1023) {
+      left: 50px;
+      width: calc(100% - 100px);
+    }
+    @include adaptive(767) {
+      display: none;
+    }
+
+    img {
+      @extend %imageResCoverAbs;
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    padding-bottom: 50px;
+  }
+
+  &__box {
+    width: 100%;
+    max-width: 823px;
+    padding: 90px 110px;
+    background-color: #efebe4;
+    @include adaptive(1365) {
+      padding: 75px 50px;
+    }
+    @include adaptive(1023) {
+      max-width: 70%;
+    }
+    @include adaptive(767) {
+      max-width: 100%;
+      padding: 0 20px;
+      background-color: transparent;
+    }
+
+    &-1 {
+      margin-right: auto;
+      margin-bottom: 100px;
+      @include adaptive(767) {
+        margin-bottom: 50px;
+      }
+    }
+
+    &-2 {
+      margin-left: auto;
+    }
+
+    &-title {
+      padding-bottom: 30px;
+      font-weight: 900;
+      font-size: 24px;
+      letter-spacing: 0.02em;
+      color: #9b8e6f;
+      text-transform: uppercase;
+      @include adaptive(767) {
+        font-size: 20px;
+      }
+    }
+
+    &-desc {
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 37px;
+      color: #000;
+      @include adaptive(767) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+// SECTION :: END
