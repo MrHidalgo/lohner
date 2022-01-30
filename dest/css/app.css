@@ -2534,6 +2534,9 @@ picture {
     padding-bottom: 50px;
   }
 }
+.our.our--breast .our__bg {
+  display: none;
+}
 .our__bg {
   z-index: 0;
   position: absolute;
