@@ -1,0 +1,80 @@
+// SECTION :: START
+
+.volume {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  @include adaptive(1439) {
+    padding-bottom: 100px;
+  }
+  @include adaptive(1023) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: calc(100% - 200px);
+    @include adaptive(1023) {
+      position: static;
+      height: auto;
+    }
+
+    > div {
+      width: 45%;
+      @include adaptive(1023) {
+        width: 100%;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+
+    > div {
+      width: 100%;
+      max-width: 690px;
+      padding-right: 20px;
+      @include adaptive(1279) {
+        max-width: 50%;
+      }
+      @include adaptive(1023) {
+        max-width: 100%;
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 50px;
+    text-align: left;
+  }
+
+  &__label {
+    padding-bottom: 20px;
+    text-align: left;
+  }
+
+  &__desc {
+    &:not(:last-of-type) {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+// SECTION :: END
