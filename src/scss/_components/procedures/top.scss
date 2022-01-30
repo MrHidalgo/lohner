@@ -1,0 +1,100 @@
+// SECTION :: START
+
+.top {
+  padding-top: 100px;
+  padding-bottom: 155px;
+  @include adaptive(1279) {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  @include adaptive(1023) {
+    padding-bottom: 70px;
+  }
+  @include adaptive(767) {
+    padding-bottom: 50px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include adaptive(1023) {
+      flex-wrap: wrap;
+    }
+
+    &-left,
+    &-right {
+      width: calc((100% - 50px) / 2);
+      @include adaptive(1023) {
+        width: 100%;
+      }
+    }
+
+    &-left {
+      @include adaptive(1023) {
+        padding-bottom: 30px;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+
+      li {
+        position: relative;
+        padding-left: 25px;
+        font-weight: 900;
+        font-size: 22px;
+        line-height: 38px;
+        color: #000;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        @include adaptive(1279) {
+          font-size: 20px;
+        }
+        @include adaptive(1023) {
+          font-size: 18px;
+        }
+        @include adaptive(767) {
+          font-size: 16px;
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          width: 15px;
+          height: 15px;
+          background-color: #efebe4;
+        }
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'Didot', sans-serif;
+    padding-bottom: 50px;
+    font-size: 60px;
+    letter-spacing: 0.02em;
+    color: #000;
+    @include adaptive(1439) {
+      font-size: 50px;
+    }
+    @include adaptive(1279) {
+      font-size: 40px;
+    }
+    @include adaptive(767) {
+      font-size: 35px;
+    }
+    @include adaptive(374) {
+      font-size: 30px;
+    }
+  }
+}
+
+// SECTION :: END

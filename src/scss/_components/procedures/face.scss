@@ -12,6 +12,52 @@
     padding-bottom: 0;
   }
 
+  &.face--breast {
+    .face {
+      &__bg {
+        @include adaptive(767) {
+          display: block;
+          width: 100%;
+          padding-bottom: 50px;
+          background-color: #efebe4;
+        }
+
+        > div {
+          &:nth-of-type(2) {
+            transform: translateY(0);
+            background-image: url('../img/img-face-bg--breast@2x.jpg');
+          }
+          &:nth-of-type(3) {
+            z-index: 4;
+            position: absolute;
+            top: auto;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            height: auto;
+            @include adaptive(767) {
+              position: static;
+              transform: unset;
+              width: 100%;
+            }
+
+            img {
+              display: block;
+              max-width: 100%;
+              height: auto;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
   &__bg {
     z-index: 0;
     position: absolute;
@@ -39,7 +85,6 @@
       top: 0;
       width: 50%;
       height: 100%;
-      background-color: #efebe4;
       @include adaptive(1023) {
         width: 65%;
       }
@@ -50,6 +95,7 @@
 
       &:nth-of-type(1) {
         z-index: 2;
+        background-color: #efebe4;
       }
       &:nth-of-type(2) {
         z-index: 1;
