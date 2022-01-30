@@ -5,17 +5,17 @@ section#testimonials.testimonials
   .testimonials__bg
     div
     div
-      img(src="img/img-testimonials-bg.jpg" srcset="img/img-testimonials-bg@2x.jpg 2x" alt="")
+      img.wow.animate__animated.animate__fadeInUp(src="img/img-testimonials-bg.jpg" srcset="img/img-testimonials-bg@2x.jpg 2x" alt="")
 
   .c-grid
     .testimonials__wrapper
       div
 
-        h2.testimonials__title
+        h2.testimonials__title.wow.animate__animated.animate__fadeInUp
           span.c-title.c-title--medium.c-title--black In the words of our patients...
           i.icon-font.icon-quote
 
-        .testimonials__carousel
+        .testimonials__carousel.wow.animate__animated.animate__fadeInUp
           .swiper.testimonialsSwiper
             .swiper-wrapper
               each val, idx in [1,2,3]
@@ -35,13 +35,13 @@ section#testimonials.testimonials
                   div
                     p.c-desc After surgery I worked with Lindsey and Rachel and they helped me so much. Always there to answer any questions I had (and I had a lot). Not to mention the two women at the front desk are the sweetest most welcoming people I’ve met.
 
-        .testimonials__nav-wrapper
+        .testimonials__nav-wrapper.wow.animate__animated.animate__fadeInUp
           a.testimonials__nav.testimonials__nav--prev(href="#")
             i.icon-font.icon-caret
           a.testimonials__nav.testimonials__nav--next(href="#")
             i.icon-font.icon-caret
 
-        .testimonials__btn.c-btn__wrapper
+        .testimonials__btn.c-btn__wrapper.wow.animate__animated.animate__fadeInUp
           a.c-btn(href="#")
             span read more testimonials
 

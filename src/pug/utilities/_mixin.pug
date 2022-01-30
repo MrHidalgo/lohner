@@ -11,15 +11,15 @@ mixin mainSection(classMod, img, title, breadcrumbsArr)
     .main__wrapper
       if(classMod === 'home')
         .main__content
-          h1.main__title.c-title.c-title--white Voted Philadelphia’s
-          p.main__subtitle “Top Doc” for 13 Years Straight!
-          .main__btn.c-btn__wrapper.c-btn__wrapper--center
+          h1.main__title.c-title.c-title--white.wow.animate__animated.animate__fadeInUp Voted Philadelphia’s
+          p.main__subtitle.wow.animate__animated.animate__fadeInUp “Top Doc” for 13 Years Straight!
+          .main__btn.c-btn__wrapper.c-btn__wrapper--center.wow.animate__animated.animate__fadeInUp
             a.c-btn.c-btn--white(href="#")
               span SCHEDULE A CONSULTATION
       else
         .main__content
-          h1.main__title.c-title.c-title--white!= title
-          .main__breadcrumbs
+          h1.main__title.c-title.c-title--white.wow.animate__animated.animate__fadeInUp!= title
+          .main__breadcrumbs.wow.animate__animated.animate__fadeInUp
             each val, idx in breadcrumbsArr
               if(idx === breadcrumbsArr.length - 1)
                 p!= val

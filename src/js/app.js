@@ -4,6 +4,7 @@ import Testimonials from "./macros/testimonials";
 import Portfolio from "./macros/portfolio";
 import Hamburger from "./macros/hamburger";
 import Menu from "./macros/menu";
+import ScrollWowAnimation from "./macros/scrollWowAnimation";
 
 
 // EVENT LISTENER - LOAD
@@ -18,6 +19,7 @@ window.addEventListener('load', (ev) => {
   Menu.init();
   Testimonials.init();
   Portfolio.init();
+  ScrollWowAnimation.init();
 
 }, false);
 

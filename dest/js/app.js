@@ -179,6 +179,36 @@ var Portfolio = function () {
 
 /***/ }),
 
+/***/ "./src/js/macros/scrollWowAnimation.js":
+/*!*********************************************!*\
+  !*** ./src/js/macros/scrollWowAnimation.js ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var ScrollWowAnimation = function () {
+  var init = function init() {
+    var wow = new WOW({
+      boxClass: 'wow',
+      animateClass: 'animated',
+      offset: 50,
+      mobile: true,
+      live: true,
+      scrollContainer: null,
+      resetAnimation: true
+    });
+    wow.init();
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (ScrollWowAnimation);
+
+/***/ }),
+
 /***/ "./src/js/macros/testimonials.js":
 /*!***************************************!*\
   !*** ./src/js/macros/testimonials.js ***!
@@ -260,6 +290,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _macros_portfolio__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./macros/portfolio */ "./src/js/macros/portfolio.js");
 /* harmony import */ var _macros_hamburger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./macros/hamburger */ "./src/js/macros/hamburger.js");
 /* harmony import */ var _macros_menu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./macros/menu */ "./src/js/macros/menu.js");
+/* harmony import */ var _macros_scrollWowAnimation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./macros/scrollWowAnimation */ "./src/js/macros/scrollWowAnimation.js");
+
 
 
 
@@ -275,6 +307,7 @@ window.addEventListener('load', function (ev) {
   _macros_menu__WEBPACK_IMPORTED_MODULE_4__["default"].init();
   _macros_testimonials__WEBPACK_IMPORTED_MODULE_1__["default"].init();
   _macros_portfolio__WEBPACK_IMPORTED_MODULE_2__["default"].init();
+  _macros_scrollWowAnimation__WEBPACK_IMPORTED_MODULE_5__["default"].init();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 
