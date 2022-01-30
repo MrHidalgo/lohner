@@ -3,6 +3,17 @@
 .testimonials {
   position: relative;
 
+  &.testimonials--breast {
+    .testimonials {
+      &__wrapper {
+        > div {
+          width: 100%;
+          max-width: 830px;
+        }
+      }
+    }
+  }
+
   &__bg {
     z-index: 0;
     position: absolute;

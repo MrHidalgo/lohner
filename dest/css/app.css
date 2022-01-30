@@ -2135,6 +2135,10 @@ picture {
 .testimonials {
   position: relative;
 }
+.testimonials.testimonials--breast .testimonials__wrapper > div {
+  width: 100%;
+  max-width: 830px;
+}
 .testimonials__bg {
   z-index: 0;
   position: absolute;
